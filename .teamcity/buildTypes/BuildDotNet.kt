@@ -33,15 +33,6 @@ class BuildDotNet: BuildType({
     }
 
     features {
-        commitStatusPublisher {
-            vcsRootExtId = DslContext.settingsRoot.id.toString()
-            publisher = github {
-                githubUrl = "https://api.github.com"
-                authType = personalToken {
-                    token = "credentialsJSON:95cbd4b7-e264-4fee-b9e6-3ac94341ab56"
-                }
-            }
-        }
         pullRequests {
             provider = github {
                 filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
