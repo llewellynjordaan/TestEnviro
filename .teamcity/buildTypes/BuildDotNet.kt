@@ -33,7 +33,7 @@ class BuildDotNet: BuildType({
         script {
             name = "Build Dot Net Project"
             scriptContent = """
-                
+                dotnet build ./src/TestEnviro.sln --configuration "Release"
             """.trimIndent()
         }
     }
