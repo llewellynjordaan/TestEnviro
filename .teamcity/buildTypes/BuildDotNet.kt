@@ -23,6 +23,8 @@ class BuildDotNet: BuildType({
             branchFilter = """
                 +:*
                 -:<default>
+                -:refs/heads/minor-release/*
+                -:refs/heads/release/*
             """.trimIndent()
         }
     }
