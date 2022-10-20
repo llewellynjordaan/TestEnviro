@@ -20,12 +20,7 @@ class BuildDotNet: BuildType({
     }
 
     triggers {
-        vcs {
-            branchFilter = """
-                +:refs/heads/release/*
-                +:refs/heads/minor-release/*
-            """.trimIndent()
-        }
+        vcs {}
     }
 
     steps {
@@ -51,7 +46,7 @@ class BuildDotNet: BuildType({
             provider = github {
                 filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
                 filterTargetBranch = """
-                    +:refs/heads/develop/brumbies
+                    +:refs/heads/develop/*
                     +:refs/heads/hotfix/*
                     +:refs/heads/feature/*
                 """.trimIndent()
