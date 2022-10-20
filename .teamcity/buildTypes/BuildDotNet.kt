@@ -26,6 +26,9 @@ class BuildDotNet: BuildType({
                 -:refs/heads/minor-release/*
                 -:refs/heads/release/*
             """.trimIndent()
+            triggerRules = """
+                +:comment=(?s)#teamcity.*#release:**
+            """.trimIndent()
         }
     }
 
