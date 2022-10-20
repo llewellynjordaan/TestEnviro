@@ -19,7 +19,12 @@ class BuildDotNet: BuildType({
     }
 
     triggers {
-        vcs {}
+        vcs {
+            branchFilter = """
+                +:*
+                -:<default>
+            """.trimIndent()
+        }
     }
 
     steps {
