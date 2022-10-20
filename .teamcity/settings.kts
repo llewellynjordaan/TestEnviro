@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import projects.BuildProject
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -25,4 +26,5 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2022.04"
 
 project {
+    subProject(BuildProject)
 }
