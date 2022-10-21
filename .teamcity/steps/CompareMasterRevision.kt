@@ -10,7 +10,7 @@ class CompareMasterRevision: PowerShellStep ({
             ${'$'}masterRevision = git rev-parse HEAD | Out-String
             ${'$'}buildRevision = "%build.vcs.number%"
             
-            if (${'$'}buildBranch -ne "refs/heads/master" -and ${'$'}masterRevision -eq ${'$'}buildRevision) {
+            if (${'$'}buildBranch -match "(^release\/*)|(^minor-release\/*)" -and ${'$'}masterRevision -eq ${'$'}buildRevision) {
                 write-host "##teamcity[buildStop comment='Branch Up To Date With Master' readdToQueue='false']"
             }
         """.trimIndent()
