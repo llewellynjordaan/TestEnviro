@@ -21,7 +21,7 @@ class BuildDotNet: BuildType({
     triggers {
         vcs {
             branchFilter = """
-                +:*
+                +:refs/pull/*/merge
                 -:<default>
             """.trimIndent()
         }
