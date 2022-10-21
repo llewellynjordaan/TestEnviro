@@ -22,12 +22,7 @@ class BuildDotNet: BuildType({
         vcs {
             branchFilter = """
                 +:*
-                +:refs/heads/minor-release/*
-                +:refs/heads/release/*
                 -:<default>
-            """.trimIndent()
-            triggerRules = """
-                +:comment=(?s)Merge:**
             """.trimIndent()
         }
     }
