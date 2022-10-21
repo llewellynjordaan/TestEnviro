@@ -29,6 +29,12 @@ class BuildDotNet: BuildType({
 
     steps {
         script {
+            name = "Get Master Build ID"
+            scriptContent = """
+                git rev-parse HEAD
+            """.trimIndent()
+        }
+        script {
             name = "Build Dot Net Project"
             scriptContent = """
                 dotnet build ./src/TestEnviro.sln --configuration "Release"
