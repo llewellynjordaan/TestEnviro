@@ -7,6 +7,7 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
 import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import steps.CompareMasterRevision
 
 class BuildDotNet: BuildType({
     name = "Build Dot Net"
@@ -28,12 +29,8 @@ class BuildDotNet: BuildType({
     }
 
     steps {
-        script {
-            name = "Get Master Build ID"
-            scriptContent = """
-                git rev-parse HEAD
-            """.trimIndent()
-        }
+        step(CompareMasterRevision())
+
         script {
             name = "Build Dot Net Project"
             scriptContent = """
