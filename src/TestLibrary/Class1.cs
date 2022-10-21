@@ -1,6 +1,7 @@
 ﻿namespace TestLibrary;
 
-// random comment
+// comment
+
 public class Class1
 {
 
