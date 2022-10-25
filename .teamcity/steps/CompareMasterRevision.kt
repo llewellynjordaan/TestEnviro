@@ -7,11 +7,12 @@ class CompareMasterRevision: PowerShellStep ({
     scriptMode = script {
         content = """
             ${'$'}buildBranch = "%teamcity.build.branch%"
-            ${'$'}masterRevision = git rev-parse HEAD | Out-String
+            ${'$'}masterRevision = git rev-parse refs/heads/master | Out-String
             ${'$'}buildRevision = "%build.vcs.number%"
             
-            if (${'$'}buildBranch -match "(^release\/*)|(^minor-release\/*)" -and ${'$'}masterRevision -eq ${'$'}buildRevision) {
-                write-host "##teamcity[buildStop comment='Branch Up To Date With Master' readdToQueue='false']"
+            if (${'$'}buildBranch.Trim() -ne "refs/heads/master" -and ${'$'}masterRevision.Trim() -eq ${'$'}buildRevision.Trim()) {
+                write-output "condition matched to cancel the build"
+                write-host "##teamcity[buildStop comment='Branch Up To Date With Master - Please Run Master Build' readdToQueue='false']"
             }
         """.trimIndent()
     }
