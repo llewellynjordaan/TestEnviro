@@ -13,6 +13,10 @@ class BuildDotNet: BuildType({
     name = "Build Dot Net"
     description = "Build Dot Net"
 
+    params {
+        param("teamcity.git.fetchAllHeads", "true")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
         cleanCheckout = true
