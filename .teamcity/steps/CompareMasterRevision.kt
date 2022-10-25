@@ -7,7 +7,7 @@ class CompareMasterRevision: PowerShellStep ({
     scriptMode = script {
         content = """
             ${'$'}buildBranch = "%teamcity.build.branch%"
-            ${'$'}masterRevision = git rev-parse refs/heads/master | Out-String
+            ${'$'}masterRevision = git rev-parse refs/remotes/origin/master | Out-String
             ${'$'}buildRevision = "%build.vcs.number%"
             
             Write-Output "Master Revision: " + ${'$'}masterRevision
