@@ -19,7 +19,10 @@ class Dump: BuildType({
         finishBuildTrigger {
             buildType = buildDependency
             successfulOnly = true
-            branchFilter = "+:*"
+            branchFilter = """
+                +:*
+                -:refs/pull/*
+            """.trimIndent()
         }
     }
 
