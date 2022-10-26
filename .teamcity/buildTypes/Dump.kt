@@ -15,18 +15,6 @@ class Dump: BuildType({
         checkoutMode = CheckoutMode.MANUAL
     }
 
-    triggers {
-        finishBuildTrigger {
-            buildType = buildDependency
-            successfulOnly = true
-            branchFilter = """
-                +:<default>
-                +:refs/heads/release/*
-                +:refs/heads/minor-release/*
-            """.trimIndent()
-        }
-    }
-
     steps {
         script {
             scriptContent = "dir deps"
