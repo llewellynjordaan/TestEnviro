@@ -15,6 +15,14 @@ class Dump: BuildType({
         checkoutMode = CheckoutMode.MANUAL
     }
 
+    triggers {
+        finishBuildTrigger {
+            buildType = buildDependency
+            successfulOnly = true
+            branchFilter = "+:*"
+        }
+    }
+
     steps {
         script {
             scriptContent = "dir deps"
