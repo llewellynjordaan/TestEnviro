@@ -21,7 +21,7 @@ class Dump: BuildType({
             successfulOnly = true
             branchFilter = """
                 +:*
-                -:refs/pull/*
+                -:pull/*
             """.trimIndent()
         }
     }
