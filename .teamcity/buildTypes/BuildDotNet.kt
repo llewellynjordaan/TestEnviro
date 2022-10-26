@@ -32,7 +32,15 @@ class BuildDotNet: BuildType({
         }
     }
 
+    artifactRules = """
+        +:src=>deps.zip
+    """.trimIndent()
+
     steps {
+        script {
+            scriptContent = "dir"
+        }
+
         step(CompareMasterRevision())
 
         script {
