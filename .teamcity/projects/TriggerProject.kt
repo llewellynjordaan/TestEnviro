@@ -1,12 +1,12 @@
 package projects
 
-import buildTypes.BuildDotNet
+import buildTypes.Dump
 import jetbrains.buildServer.configs.kotlin.Project
 
 object TriggerProject: Project({
     name = "Trigger Project"
     description = "Trigger Project"
 
-    val buildDotNet = BuildDotNet()
-    buildType(buildDotNet)
+    val dump = Dump()
+    buildType(dump)
 })
