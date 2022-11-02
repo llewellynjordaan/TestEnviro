@@ -11,7 +11,7 @@ class Credentials(): BuildType ({
     description = "Credentials"
 
     params {
-        param("octopus", "credentialsJSON:181f87a5-10cd-4c10-a740-09ead7bf6b65")
+        password("octopus", "credentialsJSON:181f87a5-10cd-4c10-a740-09ead7bf6b65")
     }
 
     vcs {
