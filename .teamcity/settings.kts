@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import projects.BuildProject
 import projects.TriggerProject
+import projects.TestingCreds
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -29,4 +30,5 @@ version = "2022.04"
 project {
     subProject(BuildProject)
     subProject(TriggerProject)
+    subProject(TestingCreds)
 }
