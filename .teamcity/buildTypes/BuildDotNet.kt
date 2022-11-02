@@ -41,7 +41,7 @@ class BuildDotNet: BuildType({
             scriptContent = "dir"
         }
 
-        step(CompareMasterRevision())
+        //step(CompareMasterRevision())
 
         script {
             name = "Build Dot Net Project"
