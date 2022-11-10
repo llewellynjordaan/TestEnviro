@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\_Projects\\TestEnviro\\src\\testenviro.api\\testenviro.api.csproj": {}
+  },
+  "projects": {
+    "C:\\_Projects\\TestEnviro\\src\\testenviro.api\\testenviro.api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_Projects\\TestEnviro\\src\\testenviro.api\\testenviro.api.csproj",
+        "projectName": "testenviro.api",
+        "projectPath": "C:\\_Projects\\TestEnviro\\src\\testenviro.api\\testenviro.api.csproj",
+        "packagesPath": "C:\\Users\\llewellyn.jordaan\\.nuget\\packages\\",
+        "outputPath": "C:\\_Projects\\TestEnviro\\src\\testenviro.api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\llewellyn.jordaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://af.inside.xero-support.com/artifactory/api/nuget/nuget-xero": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://artifactory.xero-support.com/api/nuget/nuget/": {},
+          "https://nuget.dev.xero.com/api/v2": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
